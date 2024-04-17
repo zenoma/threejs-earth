@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "three": "^0.163.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.8"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "name": "tutorial-three",
+  "version": "1.0.0",
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

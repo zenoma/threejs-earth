@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu página</title>
+    <style>
+        /* Estilo para los botones */
+        button {
+            margin: 10px auto; /* Centrar el botón horizontalmente y agregar espacio */
+            padding: 10px 20px; /* Ajustar el tamaño del botón */
+            font-size: 16px; /* Tamaño del texto */
+        }
+    </style>
+</head>
+<body>
+        <div>
+        <!-- Botones para alternar entre las escenas -->
+        <button onclick="showScene(1)">Mostrar Escena 1</button>
+        <button onclick="showScene(2)">Mostrar Escena 2</button>
+        </div>
+    <div class="container">
+        <div class="section" id="section1">
+            <!-- Aquí cargaremos el primer script -->
+            <script type="module" src="main.js"></script>
+        </div>
+        <div class="section" id="section2" style="display: none">
+            <!-- Aquí cargaremos el segundo script -->
+            <script type="module" src="main_old.js"></script>
+        </div>
+    </div>
+
+
+    <!-- Script 1 para la primera escena de Three.js -->
+    <script src="script1.js"></script>
+
+    <!-- Script 2 para la segunda escena de Three.js -->
+    <script src="script2.js"></script>
+
+    <script>
+        function showScene(sceneNumber) {
+            // Ocultar ambas secciones
+            document.getElementById('section1').style.display = 'none';
+            document.getElementById('section2').style.display = 'none';
+
+            // Mostrar la sección correspondiente a la escena seleccionada
+            document.getElementById('section' + sceneNumber).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
